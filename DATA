@@ -7,6 +7,7 @@ for i in range(255):
   dict1[chr(i)]=i
   dict2[i]=chr(i)
 img = cv2.imread("/content/desktop-wallpaper-peace-buddha-buddha-meditation-thumbnail.jpg")
+img = cv2.imread("C:\Users\raj30\Downloads\DataHiding\pngwing.com (1).png")
 height = img.shape[0]
 width = img.shape[1]
 channels = img.shape[2]
@@ -30,6 +31,7 @@ cv2.imwrite("encrypted_img.png", img)
 print("Data Hiding in Image completed successfully.")
 import base64
 with open("/content/desktop-wallpaper-peace-buddha-buddha-meditation-thumbnail.jpg", "rb") as image2string:
+with open("C:\Users\raj30\Downloads\DataHiding\pngwing.com (1).png", "rb") as image2string:
     converted_string = base64.b64encode(image2string.read())
 print(converted_string)
 with open('encode.bin', "wb") as file:
